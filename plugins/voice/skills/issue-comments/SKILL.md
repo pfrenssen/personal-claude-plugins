@@ -16,8 +16,9 @@ The facts of the draft stay exactly as they are.
    [`examples.md`](examples.md).
 2. Write the comment in the voice below, at the length of its kind.
 3. Compare it with the examples. Done when every paragraph has "I" or "we" as
-   a subject, the length fits the kind, and every fact of the source draft is
-   still there, unchanged.
+   a subject, every sentence makes one point, the comment can be understood
+   without opening another comment, the length fits the kind, and every fact
+   of the source draft is still there, unchanged.
 
 ## Voice
 
@@ -32,6 +33,20 @@ The facts of the draft stay exactly as they are.
   enumerates discrete things only: issues, deprecations, the steps of a piece
   of logic. Code goes in backticks or a code block, with a concrete example
   where the point is easier to show than to tell.
+- **Self-contained.** The reader gets everything from this comment alone.
+  When something from another comment matters, say the thing itself or quote
+  it. A comment number is only an extra for whoever wants to look it up: "I
+  was wrong in comment #15, the original code does a loose comparison and it
+  works as expected when comparing a string with a `SimpleXMLElement` object."
+- **One point per sentence.** Each sentence makes one point. A consequence
+  gets its own sentence, with its reason: "By doing this we will inform Drupal
+  that the field is required. Drupal will then take care of the form
+  validation for us. Also it will do some other helpful things like marking
+  the field as required, support entity validation etc."
+- **Commitments.** A comment reports work that is done and proposes what
+  could be done. A promise of future work, such as "I will implement this" or
+  "I can take care of that" in the examples, is written only when Pieter has
+  said in the conversation that they take that work on.
 - **Suggesting.** A proposal is an offer: "I propose to", "I think", "Maybe a
   better solution would be", "It would be good to", "Would it be a good idea
   to ...?", "Let's".
