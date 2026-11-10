@@ -1,0 +1,14 @@
+{
+  "name": "personal",
+  "description": "Personal Claude Code plugins of Pieter Frenssen.",
+  "owner": {
+    "name": "Pieter Frenssen"
+  },
+  "plugins": [
+    {
+      "name": "voice",
+      "description": "Writes comments that are posted under Pieter's name in Pieter's own voice.",
+      "source": "./plugins/voice"
+    }
+  ]
+}
