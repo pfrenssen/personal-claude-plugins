@@ -17,8 +17,9 @@ The facts of the draft stay exactly as they are.
 2. Write the comment in the voice below, at the length of its kind.
 3. Compare it with the examples. Done when every paragraph has "I" or "we" as
    a subject, every sentence makes one point, the comment can be understood
-   without opening another comment, the length fits the kind, and every fact
-   of the source draft is still there, unchanged.
+   without opening another comment, the last sentence is about the subject
+   matter, the length fits the kind, and every fact of the source draft is
+   still there, unchanged.
 
 ## Voice
 
@@ -27,8 +28,11 @@ The facts of the draft stay exactly as they are.
   allow any failures", "Let's use this for consistency".
 - **Opening.** A reply to someone's work opens with thanks, by @name when one
   person did it: "Thanks for working on this!", "Thanks for the feedback
-  @dulnan!". A report of own work opens with what was done: "I started on
-  this.", "Moved patch #11 to a MR.", "Updated code to work with latest 11.x."
+  @dulnan!". A report of own work opens with the result, in one short
+  sentence, with what makes it better when there is something to say: "I
+  found a different approach that is simpler.", "I started on this.",
+  "Updated code to work with latest 11.x." The result is the subject, the
+  commit or push that delivered it stays unmentioned.
 - **Shape.** Plain prose in paragraphs of one to three sentences. A list
   enumerates discrete things only: issues, deprecations, the steps of a piece
   of logic. Code goes in backticks or a code block, with a concrete example
@@ -52,6 +56,12 @@ The facts of the draft stay exactly as they are.
   to ...?", "Let's".
 - **Reasoning.** Say what was checked and what it showed, then conclude. The
   connectors are "So", "But", "Since", "Now that", "Also".
+- **Explaining a change.** First say how the existing code works at the place
+  of the change, then present the change as what we can do there: "When an
+  aggregate is generated on demand, `AssetResolver::getJsAssets()` retrieves
+  the list of JS assets from the cache. At this point we can check if the
+  generated JS assets in the list are available on disk. If one is missing
+  the cached list is discarded."
 - **Doubt and mistakes.** Said plainly: "I am not 100% sure", "I am guessing",
   "It looks like", "I was wrong in comment #15", "I was too quick in
   deciding".
@@ -61,9 +71,14 @@ The facts of the draft stay exactly as they are.
 - **Warmth.** An exclamation mark on thanks, credit to people by @name, and at
   most one of `:)` or `;)` in a comment. Short cheers are fine: "Yay!",
   "Cool,", "Great news".
-- **Asking.** Questions go straight to the people who can answer: "Would it be
-  OK to include these in the roadmap?", "@owenbush do you want to weigh in?",
-  "Please let me know if anything needs to be done."
+- **Asking.** A question is rare. It goes to a maintainer about a decision
+  that is theirs to make, or to a person about a contribution they are
+  actively working on: "Would it be OK to include these in the roadmap?",
+  "@owenbush do you want to weigh in?" A proposal stands on its own: it is
+  stated and left for whoever wants to respond. People who created or joined
+  an issue owe it nothing further, so a comment leaves them free of any task,
+  including confirming or agreeing.
+- **Ending.** The comment ends on its last substantive point.
 - **Words.** "remarks" for review feedback, "MR", "D11", "followup", "in
   scope of this issue", "B/C break". American spelling: "favor",
   "standardize". Verbs are mostly written out: "I am", "it is", "I will", "do
