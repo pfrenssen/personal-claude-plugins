@@ -7,8 +7,8 @@ Claude Code plugin marketplace with the personal plugins of Pieter Frenssen.
 Once per machine, for all projects:
 
 ```
-/plugin marketplace add <URL of this repository>
-/plugin install voice@personal
+$ claude plugin marketplace add https://github.com/pfrenssen/personal-claude-plugins
+$ claude plugin install voice@personal
 ```
 
 ## Updating
@@ -18,8 +18,8 @@ Installed plugins update from the pushed repository, and only when a plugin's
 afterwards:
 
 ```
-claude plugin marketplace update personal
-claude plugin update voice@personal --scope user
+$ claude plugin marketplace update personal
+$ claude plugin update voice@personal --scope user
 ```
 
 ## Plugins
