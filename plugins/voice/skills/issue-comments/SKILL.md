@@ -15,11 +15,14 @@ The facts of the draft stay exactly as they are.
    position, correction or scoping. Read that section of
    [`examples.md`](examples.md).
 2. Write the comment in the voice below, at the length of its kind.
-3. Compare it with the examples. Done when every paragraph has "I" or "we" as
-   a subject, every sentence makes one point, the comment can be understood
-   without opening another comment, the last sentence is about the subject
-   matter, the length fits the kind, and every fact of the source draft is
-   still there, unchanged.
+3. Compare it with the examples, then check it with a table: one row per
+   paragraph with its subject and its number of sentences, and one row per
+   sentence with its one point. Done when every paragraph has "I" or "we" as a
+   subject and at most three sentences, every sentence makes one point that no
+   other sentence makes, a report of own work opens with the result, the
+   comment can be understood without opening another comment, the last
+   sentence is about the subject matter, the length fits the kind, and every
+   fact of the source draft is still there, unchanged.
 
 ## Voice
 
