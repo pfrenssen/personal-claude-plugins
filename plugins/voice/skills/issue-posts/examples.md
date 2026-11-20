@@ -1,8 +1,8 @@
 # Examples
 
-Issue summaries and comments Pieter posted on drupal.org between February
-2025 and August 2026, word for word. Issue references are shown the way
-drupal.org renders them.
+Issue summaries Pieter posted on drupal.org between February 2025 and May
+2026, and comments posted between February 2025 and August 2026, word for
+word. Issue references are shown the way drupal.org renders them.
 
 ## Issue summary
 
