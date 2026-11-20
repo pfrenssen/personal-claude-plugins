@@ -18,8 +18,10 @@ The facts of the draft stay exactly as they are.
 3. Compare it with the examples, then check it with a table: one row per
    paragraph with its subject and its number of sentences, and one row per
    sentence with its one point. Done when every paragraph has "I" or "we" as a
-   subject and at most three sentences, every sentence makes one point that no
-   other sentence makes, a report of own work opens with the result, the
+   subject, or reports Claude's work with the code or the finding as the
+   subject, every paragraph has at most three sentences, every sentence makes
+   one point that no other sentence makes, a report of own work opens with the
+   result, a report of Claude's work names Claude in its opening, the
    comment can be understood without opening another comment, the last
    sentence is about the subject matter, the length fits the kind, and every
    fact of the source draft is still there, unchanged.
@@ -29,6 +31,12 @@ The facts of the draft stay exactly as they are.
 - **Speaker.** "I" for what Pieter did, checked or thinks. "We" and "let's"
   for the shared work of the project: "We can now configure PHPStan to not
   allow any failures", "Let's use this for consistency".
+- **Claude's work.** When the comment reports work that Claude did, such as an
+  investigation, a reproduction or a fix, the opening says so in plain words:
+  "I ran into the same error and let Claude investigate it. It found the
+  cause." The findings then follow as facts, with the code or the finding as
+  the subject: "It can be reproduced with an index that has items left to
+  index."
 - **Opening.** A reply to someone's work opens with thanks, by @name when one
   person did it: "Thanks for working on this!", "Thanks for the feedback
   @dulnan!". A report of own work opens with the result, in one short

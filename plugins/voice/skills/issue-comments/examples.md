@@ -97,6 +97,23 @@ show the problem:
 > `getSchemaForIndex(IndexInterface $index)`. This clearly shows what to pass
 > in.
 
+The opening of a proposal that reports an investigation Claude did, and its
+reproduction paragraph:
+
+> I ran into the same error and let Claude investigate it. It found the cause.
+> The command fails when another process (e.g. on a cron job) is indexing the
+> same index at that moment.
+
+> It can be reproduced with an index that has items left to index. In one
+> terminal acquire the lock and hold it:
+>
+> ```
+> drush php:eval '\Drupal::lock()->acquire("search_api:index:INDEX_ID", 60); sleep(180);'
+> ```
+>
+> Then in a second terminal, run `drush search-api:index`. It fails with the
+> error from the issue summary and exit code 1. Without the lock it works.
+
 ## Position
 
 > I have used this patch with great success in several projects. It is great
