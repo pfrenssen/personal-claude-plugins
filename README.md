@@ -30,13 +30,15 @@ Writes text that is posted under Pieter's name in Pieter's own voice.
 
 | Component | Purpose |
 |---|---|
-| `voice:issue-comments` skill | Writes issue and merge request comments in Pieter's voice, with real comments as examples for each kind of comment. Triggered when a comment, review or reply is drafted or rewritten. |
+| `voice:issue-posts` skill | Writes issue summaries, and issue and merge request comments, in Pieter's voice, with real posts as examples for each kind of post. Triggered when an issue summary, comment, review or reply is drafted or rewritten. |
 
-The voice was taken from the comments of drupal.org user `pfrenssen` posted
-between February 2025 and 9 August 2026. Later comments were left out on
-purpose. To read the history again, page through the drupal.org API, newest
-first; `comment_body.value` holds the text:
+The voice was taken from the comments and issue summaries of drupal.org user
+`pfrenssen` posted between February 2025 and 9 August 2026. Later posts were
+left out on purpose. To read the history again, page through the drupal.org
+API, newest first; `comment_body.value` holds the text of a comment and
+`body.value` the text of an issue summary:
 
 ```
 https://www.drupal.org/api-d7/comment.json?author=382067&sort=created&direction=DESC&limit=50&page=0
+https://www.drupal.org/api-d7/node.json?type=project_issue&author=382067&sort=created&direction=DESC&limit=50&page=0
 ```

@@ -1,7 +1,90 @@
 # Examples
 
-Comments Pieter posted on drupal.org between February 2025 and August 2026,
-word for word. Issue references are shown the way drupal.org renders them.
+Issue summaries and comments Pieter posted on drupal.org between February
+2025 and August 2026, word for word. Issue references are shown the way
+drupal.org renders them.
+
+## Issue summary
+
+> ### Problem/Motivation
+>
+> One of the goals for the 3.0 roadmap is to set the minimum PHP version to
+> 8.3 so we can adopt new PHP practices which cannot be done in 2.x because
+> they would break backwards compatibility.
+>
+> We will be able to use major new features like readonly classes, trait
+> constants, typed constants etc.
+>
+> We should do this before issuing the first 3.0.0 alpha release.
+
+> ### Problem/Motivation
+>
+> Getting a deprecation warning on PHP 8.3 when running tests:
+>
+> > Deprecated: strpos(): Passing null to parameter #1 ($haystack) of type
+> > string is deprecated in
+> > /modules/contrib/tmgmt/translators/tmgmt_local/src/Menu/TMGMTLocalBreadcrumbBuilder.php
+> > on line 23
+>
+> The code in question is this:
+>
+> ```php
+>     if (strpos($route_match->getRouteName(), 'view.tmgmt_local_manage_translate_task') === 0 || strpos($route_match->getRouteName(), 'view.tmgmt_local_task_overview') === 0 ||
+>       $route_match->getParameter('tmgmt_local_task') instanceof LocalTaskInterface || $route_match->getParameter('tmgmt_local_task_item') instanceof LocalTaskItemInterface) {
+>       return TRUE;
+>     }
+> ```
+>
+> It happens because `$route_match->getRouteName()` can return `NULL` if
+> there is no route, e.g. when running on the CLI.
+
+> ### Problem/Motivation
+>
+> When Drupal is hosted on multiple instances, the CSV import doesn't work.
+> The CSV file is saved in temporary storage of the instance the submit
+> handler is processed on, but since temporary storage is not shared across
+> multiple web heads, the file is missing on all other instances and cannot be
+> processed.
+>
+> #### Steps to reproduce
+>
+> 1. Host Drupal on infrastructure that has multiple running instances.
+> 2. Import a CSV file containing Texts translations.
+>
+> Result: the translations are not imported, or at best are partially
+> imported.
+>
+> ### Proposed resolution
+>
+> Drupal core solves the problem of importing translations in a batch process
+> in the Locale module by storing the content of the file in the key-value
+> store which allows up to 4GB of serialized data to be stored, ref
+> `locale_translation_status_save()`.
+>
+> We can use the same tactic.
+
+> ### Problem/Motivation
+>
+> The documentation for `WebformElementInterface::hasMultipleValues()`
+> declares that this method returns a boolean, but this is not the full
+> picture.
+>
+> The method can return these values:
+>
+> 1. `TRUE` if there are unlimited values.
+> 2. `FALSE` if only a single value is allowed
+> 3. An integer in case a limited number of values are allowed. For example
+>    if 2 values are allowed it will return `2`
+>
+> The method is not well named, and there is overlap between this and
+> `::supportsMultipleValues()` as well as `::hasMultipleWrapper()`. It is also
+> confusing that `FALSE` equates to 1 allowed element. However changing method
+> names and/or return values would be a B/C break.
+>
+> ### Proposed resolution
+>
+> The simplest solution would be to update the documentation to match the
+> reality.
 
 ## Acknowledgement
 
