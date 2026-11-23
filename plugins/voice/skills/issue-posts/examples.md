@@ -35,8 +35,8 @@ word. Issue references are shown the way drupal.org renders them.
 >     }
 > ```
 >
-> It happens because `$route_match->getRouteName()` can return `NULL` if
-> there is no route, e.g. when running on the CLI.
+> It happens because `$route_match->getRouteName()` can return `NULL` if there
+> is no route, e.g. when running on the CLI.
 
 > ### Problem/Motivation
 >
@@ -73,8 +73,8 @@ word. Issue references are shown the way drupal.org renders them.
 >
 > 1. `TRUE` if there are unlimited values.
 > 2. `FALSE` if only a single value is allowed
-> 3. An integer in case a limited number of values are allowed. For example
->    if 2 values are allowed it will return `2`
+> 3. An integer in case a limited number of values are allowed. For example if
+>    2 values are allowed it will return `2`
 >
 > The method is not well named, and there is overlap between this and
 > `::supportsMultipleValues()` as well as `::hasMultipleWrapper()`. It is also
