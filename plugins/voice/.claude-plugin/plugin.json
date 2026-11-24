@@ -1,6 +1,6 @@
 {
   "name": "voice",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Writes issue summaries and comments that are posted under Pieter's name in Pieter's own voice.",
   "author": {
     "name": "Pieter Frenssen"
