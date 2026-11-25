@@ -64,9 +64,14 @@ copied.
 
 ## Length
 
+The word ranges count the prose of the post. Content that the project's template
+or another skill requires, such as error output, code blocks, findings with
+`path:line`, steps to reproduce and a numbered list of requested changes, comes
+in addition to them.
+
 | Kind | Length |
 |---|---|
-| Issue summary | 20 to 150 words of prose, plus error output and code in code blocks |
+| Issue summary | 20 to 150 words |
 | Acknowledgement | One line |
 | Status update, review, scoping, correction | 20 to 80 words |
 | Position | 60 to 120 words |
